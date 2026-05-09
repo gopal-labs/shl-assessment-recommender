@@ -17,5 +17,9 @@ COPY . .
 # Ensure data directories exist
 RUN mkdir -p data/raw data/processed data/faiss_index
 
+# Fetch data and build FAISS index during build
+RUN python scripts/scrape_catalog.py
+RUN python scripts/build_index.py
+
 # Command to run the application
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
