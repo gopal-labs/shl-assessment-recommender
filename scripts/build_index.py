@@ -30,7 +30,8 @@ def build_index():
     for item in catalog:
         # Create a rich text representation for semantic search
         skills_str = ", ".join(item.get("skills_measured", []))
-        text = f"{item['name']}. {item['description']} Skills: {skills_str}. Category: {item['category']}."
+        levels_str = ", ".join(item.get("job_levels", []))
+        text = f"{item['name']}. {item['description']} Role Levels: {levels_str}. Skills: {skills_str}. Category: {item['category']}."
         texts_to_embed.append(text)
         
         # Save metadata to match back after search
@@ -40,7 +41,10 @@ def build_index():
             "test_type": item.get("test_type", ""),
             "description": item.get("description", ""),
             "category": item.get("category", ""),
-            "skills": item.get("skills_measured", [])
+            "skills": item.get("skills_measured", []),
+            "job_levels": item.get("job_levels", []),
+            "duration": item.get("duration", ""),
+            "languages": item.get("languages", [])
         })
 
     print("Generating embeddings...")

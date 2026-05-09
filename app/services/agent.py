@@ -28,7 +28,9 @@ async def run_agent(messages: List[Message]) -> ChatResponse:
     context_lines = []
     for i, item in enumerate(retrieved_items, 1):
         skills = ", ".join(item.get('skills', []))
-        context_lines.append(f"{i}. Name: {item['name']} | Type: {item['test_type']} | URL: {item['url']} | Skills: {skills} | Desc: {item['description']}")
+        levels = ", ".join(item.get('job_levels', []))
+        duration = item.get('duration', 'N/A')
+        context_lines.append(f"{i}. Name: {item['name']} | Levels: {levels} | Duration: {duration} | Type: {item['test_type']} | URL: {item['url']} | Skills: {skills} | Desc: {item['description']}")
     
     context_str = "\n".join(context_lines) if context_lines else "No relevant assessments found in catalog."
     

@@ -17,7 +17,7 @@ def _generate_with_openai(prompt: str) -> dict:
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     
     response = client.chat.completions.create(
-        model="gpt-5.4-mini",
+        model="gpt-4o-mini",
         messages=[{"role": "system", "content": prompt}],
         temperature=0.0,
         response_format={"type": "json_object"}
@@ -31,7 +31,7 @@ def _generate_with_gemini(prompt: str) -> dict:
     genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
     
     model = genai.GenerativeModel(
-        'gemini-1.5-flash',
+        'gemini-2.5-flash-lite',
         generation_config={"response_mime_type": "application/json"}
     )
     

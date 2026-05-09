@@ -27,7 +27,10 @@ def fetch_shl_catalog():
                 "description": item.get("description", ""),
                 "category": test_type,
                 "test_type": test_type,
-                "skills_measured": keys
+                "skills_measured": keys,
+                "job_levels": item.get("job_levels", []),
+                "duration": item.get("duration", ""),
+                "languages": item.get("languages", [])
             })
             
         return processed_catalog
