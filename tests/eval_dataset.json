@@ -1,0 +1,48 @@
+[
+  {
+    "id": "q1",
+    "query": "I need a test for a Mid-Professional .NET developer.",
+    "expected_retrieval_names": [
+      ".NET Framework 4.5",
+      ".NET MVC (New)",
+      ".NET WCF (New)"
+    ],
+    "expected_skills": ["Knowledge & Skills", ".NET"],
+    "expected_job_level": "Mid-Professional"
+  },
+  {
+    "id": "q2",
+    "query": "What is a good assessment for an Executive leadership role?",
+    "expected_retrieval_names": [
+      "Occupational Personality Questionnaire OPQ32r",
+      "OPQ Leadership Report",
+      "Global Skills Development Report"
+    ],
+    "expected_skills": ["Personality & Behavior", "Leadership"],
+    "expected_job_level": "Executive"
+  },
+  {
+    "id": "q3",
+    "query": "Do you have a coding simulation for Java?",
+    "expected_retrieval_names": [
+      "Core Java (Advanced Level) (New)",
+      "Core Java (Entry Level) (New)",
+      "Automata (New)",
+      "Automata Pro (New)"
+    ],
+    "expected_skills": ["Java", "Simulations"],
+    "expected_job_level": "Any"
+  },
+  {
+    "id": "q4",
+    "query": "We are hiring customer service reps for a contact center.",
+    "expected_retrieval_names": [
+      "Contact Center Call Simulation (New)",
+      "Customer Service Phone Simulation",
+      "Customer Service Phone Solution",
+      "Conversational Multichat Simulation"
+    ],
+    "expected_skills": ["Simulations", "Customer Service"],
+    "expected_job_level": "Entry-Level"
+  }
+]
