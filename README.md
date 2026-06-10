@@ -79,5 +79,3 @@ python -m pytest tests/
 
 I set this up to be easily deployed on Render's free tier. 
 If you connect this repo to Render, it should pick up the `render.yaml` file automatically. Just don't forget to add your `OPENAI_API_KEY` or `GEMINI_API_KEY` in the Render dashboard!
-
-If you want to read more about why I built it this way, check out `approach_document.md`.
